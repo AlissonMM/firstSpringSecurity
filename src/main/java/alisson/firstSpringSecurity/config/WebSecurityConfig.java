@@ -1,4 +1,4 @@
-package alisson.firstSpringSecurity;
+package alisson.firstSpringSecurity.config;
 
 import alisson.firstSpringSecurity.config.SecurityDatabaseService;
 import org.springframework.beans.factory.annotation.Autowired;
