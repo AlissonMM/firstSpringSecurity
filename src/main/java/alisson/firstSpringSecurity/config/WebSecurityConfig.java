@@ -43,6 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/login").permitAll() // Allow access to "/login" for all users.
                 .antMatchers("/managers").hasRole("MANAGERS") // Require "MANAGERS" role for "/managers".
                 .antMatchers("/users").hasAnyRole("USERS","MANAGERS") // Require either "USERS" or "MANAGERS" role for "/users".
+                .antMatchers("/tests").hasRole("MANAGERS")
                 .anyRequest().authenticated().and().httpBasic(); // All other requests must be authenticated (require login).
                  // Use httpBasic authentication.
     }
